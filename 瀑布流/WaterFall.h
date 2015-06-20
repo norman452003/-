@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  WaterFall.h
 //  瀑布流
 //
 //  Created by 龚欣 on 15/6/19.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UICollectionViewController
+@interface WaterFall : UICollectionViewFlowLayout
 
+@property (nonatomic,strong) NSArray *shopList;
 
 @end
-
