@@ -60,7 +60,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="uWY-q1-T3w">
+                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="uWY-q1-T3w">
                                     <rect key="frame" x="282" y="7" width="37" height="37"/>
                                     <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </activityIndicatorView>
@@ -71,7 +71,7 @@
                                 <constraint firstAttribute="centerY" secondItem="uWY-q1-T3w" secondAttribute="centerY" id="jbr-nd-VgJ"/>
                             </constraints>
                             <connections>
-                                <outlet property="indicator" destination="uWY-q1-T3w" id="IP2-pP-of1"/>
+                                <outlet property="indicator" destination="uWY-q1-T3w" id="t53-px-RIh"/>
                             </connections>
                         </collectionReusableView>
                         <connections>

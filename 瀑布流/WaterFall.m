@@ -12,7 +12,7 @@
 
 @interface WaterFall ()
 
-@property (nonatomic,strong) NSMutableArray *attris;
+@property (nonatomic,strong) NSArray *attris;
 
 @end
 
@@ -74,7 +74,7 @@
     bottomAttri.frame = CGRectMake(0, colHeight[highestIndex]-self.minimumLineSpacing, self.collectionView.bounds.size.width, 44);
     [arrayM addObject:bottomAttri];
     
-    [self.attris addObjectsFromArray:arrayM.copy];
+    self.attris = arrayM.copy;
 }
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect{
@@ -107,12 +107,12 @@
     }
     return index;
 }
-
-- (NSMutableArray *)attris{
-    if (_attris == nil){
-        _attris = [NSMutableArray array];
-    }
-    return _attris;
-}
+//  这里不能用懒加载 想想为什么~
+//- (NSMutableArray *)attris{
+//    if (_attris == nil){
+//        _attris = [NSMutableArray array];
+//    }
+//    return _attris;
+//}
 
 @end

@@ -12,9 +12,11 @@
 #import "ShopCell.h"
 #import "FootCollectionView.h"
 @interface ViewController ()
+
 @property (weak, nonatomic) IBOutlet WaterFall *flowLayOut;
 @property (nonatomic,strong) NSMutableArray *shopList;
-
+@property (nonatomic,weak) FootCollectionView *footView;
+@property (nonatomic,assign,getter=isLoading) BOOL loading;
 
 @end
 
@@ -32,7 +34,7 @@
     self.flowLayOut.shopList = self.shopList;
     
     index ++;
-    
+    [self.collectionView reloadData];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -52,13 +54,31 @@
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     if ([kind isEqualToString:UICollectionElementKindSectionFooter]){
-        UICollectionReusableView *footView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"foot" forIndexPath:indexPath];
-        return footView;
+       self.footView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"foot" forIndexPath:indexPath];
+        return self.footView;
     }
     
     return nil;
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if (self.footView == nil || self.isLoading){
+        return;
+    }
+    if ((scrollView.contentOffset.y + [UIScreen mainScreen].bounds.size.height) > self.footView.frame.origin.y){
+        [self.footView.indicator startAnimating];
+        self.loading = YES;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSLog(@"123");
+            [self loadData];
+            self.loading = NO;
+//            [self.footView.indicator stopAnimating];
+            self.footView = nil;
+            
+        });
+    }
+    
+}
 
 - (NSMutableArray *)shopList{
     if (_shopList == nil){
