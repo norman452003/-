@@ -10,22 +10,28 @@
 #import "Shop.h"
 #import "WaterFall.h"
 #import "ShopCell.h"
+#import "FootCollectionView.h"
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet WaterFall *flowLayOut;
 @property (nonatomic,strong) NSMutableArray *shopList;
+
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadDataWithIndex:1];
+    [self loadData];
 }
 
-- (void)loadDataWithIndex:(NSInteger)index{
+- (void)loadData{
 
-   [self.shopList addObjectsFromArray:[Shop shopsWithIndex:index]];
+    static NSInteger index = 0;
+    [self.shopList addObjectsFromArray:[Shop shopsWithIndex:index]];
     self.flowLayOut.shopList = self.shopList;
+    
+    index ++;
     
 }
 
@@ -44,14 +50,15 @@
     
 }
 
-//- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
-//    if ([kind isEqualToString:UICollectionElementKindSectionFooter]){
-//        UICollectionReusableView *footView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"foot" forIndexPath:indexPath];
-//        return footView;
-//    }
-//    
-//    return nil;
-//}
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    if ([kind isEqualToString:UICollectionElementKindSectionFooter]){
+        UICollectionReusableView *footView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"foot" forIndexPath:indexPath];
+        return footView;
+    }
+    
+    return nil;
+}
+
 
 - (NSMutableArray *)shopList{
     if (_shopList == nil){

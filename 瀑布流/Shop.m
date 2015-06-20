@@ -18,7 +18,7 @@
 
 + (NSArray *)shopsWithIndex:(NSInteger)index{
 
-    NSString *path = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%ld.plist",index] ofType:nil];
+    NSString *path = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%ld.plist",index % 3 + 1] ofType:nil];
     NSArray *dictArray = [NSArray arrayWithContentsOfFile:path];
     NSMutableArray *arrayM = [NSMutableArray arrayWithCapacity:dictArray.count];
     [dictArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {

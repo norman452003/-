@@ -56,10 +56,23 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="foot" id="abC-Qf-iCd">
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="foot" id="abC-Qf-iCd" customClass="FootCollectionView">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="uWY-q1-T3w">
+                                    <rect key="frame" x="282" y="7" width="37" height="37"/>
+                                    <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </activityIndicatorView>
+                            </subviews>
                             <color key="backgroundColor" red="0.45145890950000001" green="1" blue="0.2665801833" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="centerX" secondItem="uWY-q1-T3w" secondAttribute="centerX" id="7AZ-5k-qSe"/>
+                                <constraint firstAttribute="centerY" secondItem="uWY-q1-T3w" secondAttribute="centerY" id="jbr-nd-VgJ"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="indicator" destination="uWY-q1-T3w" id="IP2-pP-of1"/>
+                            </connections>
                         </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="QDF-mm-lcV" id="wBp-PA-4mb"/>

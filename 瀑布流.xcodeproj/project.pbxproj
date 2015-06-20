@@ -14,6 +14,7 @@
 		943C89421B3456C5000A37E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 943C89411B3456C5000A37E1 /* Images.xcassets */; };
 		943C89451B3456C5000A37E1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 943C89431B3456C5000A37E1 /* LaunchScreen.xib */; };
 		943C89511B3456C6000A37E1 /* ___Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 943C89501B3456C6000A37E1 /* ___Tests.m */; };
+		945C5A6E1B3559BA00EE79D2 /* FootCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 945C5A6D1B3559BA00EE79D2 /* FootCollectionView.m */; };
 		948BBD921B35122700DA10F7 /* ShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 948BBD911B35122700DA10F7 /* ShopCell.m */; };
 		948BBDB51B35128700DA10F7 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 948BBD951B35128600DA10F7 /* MKAnnotationView+WebCache.m */; };
 		948BBDB61B35128700DA10F7 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 948BBD971B35128600DA10F7 /* NSData+ImageContentType.m */; };
@@ -62,6 +63,8 @@
 		943C894A1B3456C6000A37E1 /* 瀑布流Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "瀑布流Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		943C894F1B3456C6000A37E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		943C89501B3456C6000A37E1 /* ___Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___Tests.m"; sourceTree = "<group>"; };
+		945C5A6C1B3559BA00EE79D2 /* FootCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootCollectionView.h; sourceTree = "<group>"; };
+		945C5A6D1B3559BA00EE79D2 /* FootCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootCollectionView.m; sourceTree = "<group>"; };
 		948BBD901B35122700DA10F7 /* ShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCell.h; sourceTree = "<group>"; };
 		948BBD911B35122700DA10F7 /* ShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCell.m; sourceTree = "<group>"; };
 		948BBD941B35128600DA10F7 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 				94F7B15B1B34581900E6A018 /* Shop.m */,
 				94F7B15D1B34615800E6A018 /* WaterFall.h */,
 				94F7B15E1B34615800E6A018 /* WaterFall.m */,
+				945C5A6C1B3559BA00EE79D2 /* FootCollectionView.h */,
+				945C5A6D1B3559BA00EE79D2 /* FootCollectionView.m */,
 				943C893E1B3456C5000A37E1 /* Main.storyboard */,
 				943C89411B3456C5000A37E1 /* Images.xcassets */,
 				943C89431B3456C5000A37E1 /* LaunchScreen.xib */,
@@ -354,6 +359,7 @@
 				948BBDB51B35128700DA10F7 /* MKAnnotationView+WebCache.m in Sources */,
 				948BBDB81B35128700DA10F7 /* SDWebImageCompat.m in Sources */,
 				94F7B15C1B34581900E6A018 /* Shop.m in Sources */,
+				945C5A6E1B3559BA00EE79D2 /* FootCollectionView.m in Sources */,
 				948BBD921B35122700DA10F7 /* ShopCell.m in Sources */,
 				948BBDC01B35128700DA10F7 /* UIImage+MultiFormat.m in Sources */,
 				948BBDC21B35128700DA10F7 /* UIImageView+HighlightedWebCache.m in Sources */,
