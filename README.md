@@ -1,0 +1,3 @@
+# FlowLayoutDisplay
+通过自定义UICollectionViewFlowLayout，在prepareLayout方法里面计算每个cell的size，通过数组保存每列的高度，通过数组得出高度最小的列
+向其插入cell。
