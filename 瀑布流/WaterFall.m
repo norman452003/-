@@ -107,12 +107,6 @@
     }
     return index;
 }
-//  这里不能用懒加载 想想为什么~
-//- (NSMutableArray *)attris{
-//    if (_attris == nil){
-//        _attris = [NSMutableArray array];
-//    }
-//    return _attris;
-//}
+
 
 @end
